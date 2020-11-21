@@ -64,7 +64,7 @@ spec:
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress 
 metadata:
-  name: mongodb-express-ingress
+  name: mongodb-express-ingress-2
 spec:
   rules:
   - host: monga2.com 
