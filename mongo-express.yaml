@@ -61,3 +61,16 @@ spec:
       - backend:
           serviceName: mongodb-express-service
           servicePort: 80
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress 
+metadata:
+  name: mongodb-express-ingress
+spec:
+  rules:
+  - host: monga2.com 
+    http:
+      paths:
+      - backend:
+          serviceName: mongodb-express-service
+          servicePort: 80
