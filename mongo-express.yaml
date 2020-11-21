@@ -54,8 +54,9 @@ metadata:
   name: mongodb-express-ingress
 spec:
   rules:
-  http:
-    paths:
-    - backend:
-        serviceName: mongodb-express-service
-        servicePort: 80
+  - host: monga.com 
+    http:
+      paths:
+      - backend:
+          serviceName: mongodb-express-service
+          servicePort: 80
