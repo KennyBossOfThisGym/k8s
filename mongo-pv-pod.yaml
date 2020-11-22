@@ -6,6 +6,7 @@ spec:
   volumes:
     - name: mongodb-data
       gcePersistentDisk:
+<<<<<<< HEAD
         pdName: test-pv
         fstype: ext4
   containers:
@@ -17,3 +18,16 @@ spec:
     ports:
     - containerPort: 27017
       protocol:  TCP
+=======
+          pdName: test-pv
+          fstype: ext4
+  containers:
+    - image: mongo
+      name: mongodb-data
+      volumeMounts:
+        - name: mongodb-data
+          mountPath: /data/db
+      ports:
+      - containerPort: 27017
+        protocol:  TCP
+>>>>>>> 5bb6a448786b7389d1117c0ed0d89af27de55505
